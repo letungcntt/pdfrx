@@ -546,7 +546,7 @@ class _PdfTextRenderBox extends RenderBox with Selectable, SelectionRegistrant {
   }
 
   @override
-  SelectedContent? getSelectedContent() =>
+  SelectedContent? getSelectedContent({bool isMarkdown = false}) =>
       value.hasSelection && _selectedText != null
           ? SelectedContent(plainText: _selectedText!)
           : null;
